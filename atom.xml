@@ -1,96 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>coderberry</title>
-  <meta name="author" content="Eric Berry">
-
-  
-  <meta name="description" content="Recently I was asked to implement Redis/Resque into an existing project that already had Redis up and running with another Redis server. This ended...">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><![CDATA[coderberry]]></title>
+  <link href="http://cavneb.github.com/atom.xml" rel="self"/>
+  <link href="http://cavneb.github.com/"/>
+  <updated>2011-10-18T17:36:23-06:00</updated>
+  <id>http://cavneb.github.com/</id>
+  <author>
+    <name><![CDATA[Eric Berry]]></name>
+    <email><![CDATA[coderberry@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <link rel="canonical" href="http://cavneb.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="coderberry" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-</head>
-
-<body   >
-  <header role="banner" style="display: none;"><!-- <hgroup>
-  <h1><a href="/">coderberry</a></h1>
-  
-    <h2>learning by teaching</h2>
-  
-</hgroup> -->
-<img src="/images/berries.png">
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:cavneb.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-<ul class="main-navigation">
-  <li class="title"><a href="/">Coderberry</a></li>
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/09/bunny-rabbitmq/">Bunny RabbitMQ</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-08-09T00:00:00-06:00" pubdate  data-updated="true" >Aug 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/posts/crazy-rabbit.jpg"></p>
+  <entry>
+    <title type="html"><![CDATA[Bunny RabbitMQ]]></title>
+    <link href="http://cavneb.github.com/blog/2011/08/09/bunny-rabbitmq/"/>
+    <updated>2011-08-09T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/08/09/bunny-rabbitmq</id>
+    <content type="html"><![CDATA[<p><img src="http://cavneb.github.com/images/posts/crazy-rabbit.jpg"></p>
 
 <p>Recently I was asked to implement <a href="https://github.com/defunkt/resque">Redis/Resque</a> into an existing project that already had Redis up and running with another Redis server. This ended up being a lot more difficult than I had anticipated due to the <a href="https://github.com/defunkt/resque/blob/master/lib/resque.rb">singleton nature</a> of the Resque gem. This led us to explore other possible options and we ended up on <a href="http://www.rabbitmq.com/">RabbitMQ</a>.</p>
 
@@ -285,40 +213,15 @@ vagrant@lucid32:~$ sudo apt-get install rabbitmq-server
 
 
 <p>There you have it!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/17/google-plus-for-the-facebook-user/">Google+ for the Facebook User</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-07-17T00:00:00-06:00" pubdate  data-updated="true" >Jul 17<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/posts/FutureFacebookAddict.gif" width="300" border="0" style="float: left; margin-right: 10px;" /></p>
+  <entry>
+    <title type="html"><![CDATA[Google+ for the Facebook User]]></title>
+    <link href="http://cavneb.github.com/blog/2011/07/17/google-plus-for-the-facebook-user/"/>
+    <updated>2011-07-17T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/07/17/google-plus-for-the-facebook-user</id>
+    <content type="html"><![CDATA[<p><img src="http://cavneb.github.com/images/posts/FutureFacebookAddict.gif" width="300" border="0" style="float: left; margin-right: 10px;" /></p>
 
 <h1>Google+ vs. Facebook</h1>
 
@@ -452,40 +355,15 @@ vagrant@lucid32:~$ sudo apt-get install rabbitmq-server
 
 <div style="clear: both;">&nbsp;</div>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/">How to Fix the Iconv Require Error in Ruby 1.9 and RVM</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-05-17T00:00:00-06:00" pubdate  data-updated="true" >May 17<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>This post was copied from <a href="http://exceptionz.wordpress.com/2010/02/03/how-to-fix-the-iconv-require-error-in-ruby-1-9/">exceptions.wordpress.com</a> with minor updates.</em></p>
+  <entry>
+    <title type="html"><![CDATA[How to fix the iconv require error in Ruby 1.9 and RVM]]></title>
+    <link href="http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/"/>
+    <updated>2011-05-17T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm</id>
+    <content type="html"><![CDATA[<p><em>This post was copied from <a href="http://exceptionz.wordpress.com/2010/02/03/how-to-fix-the-iconv-require-error-in-ruby-1-9/">exceptions.wordpress.com</a> with minor updates.</em></p>
 
 <p>So you are working with RVM / Rails 3 / Ruby 1.9.2 and you keep on getting the following error:</p>
 
@@ -542,40 +420,15 @@ vagrant@lucid32:~$ sudo apt-get install rabbitmq-server
 
 
 <p>Now you should be good to go!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/03/29/multi-associative-gorm-criteria-with-projections/">Multi-Associative GORM Criteria With Projections</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-03-29T00:00:00-06:00" pubdate  data-updated="true" >Mar 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have three domain classes: Lead, Submission and BuyerLog:</p>
+  <entry>
+    <title type="html"><![CDATA[Multi-Associative GORM Criteria with Projections]]></title>
+    <link href="http://cavneb.github.com/blog/2011/03/29/multi-associative-gorm-criteria-with-projections/"/>
+    <updated>2011-03-29T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/03/29/multi-associative-gorm-criteria-with-projections</id>
+    <content type="html"><![CDATA[<p>I have three domain classes: Lead, Submission and BuyerLog:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -705,40 +558,15 @@ vagrant@lucid32:~$ sudo apt-get install rabbitmq-server
 
 
 <p>Thanks to schmolly159 on the #grails freenode IRC channel for the examples and continued help.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues/">Paginator for Those Suffering From PostgreSQL Count(*) Speed Issues</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-11-24T00:00:00-07:00" pubdate  data-updated="true" >Nov 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Our company has been using PostgreSQL for  a very long time and has found it a very solid product for our needs. One thing that we&#8217;ve run into is that as our database grows (1mil+
+  <entry>
+    <title type="html"><![CDATA[Paginator for those suffering from PostgreSQL count(*) speed issues]]></title>
+    <link href="http://cavneb.github.com/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues/"/>
+    <updated>2010-11-24T00:00:00-07:00</updated>
+    <id>http://cavneb.github.com/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues</id>
+    <content type="html"><![CDATA[<p>Our company has been using PostgreSQL for  a very long time and has found it a very solid product for our needs. One thing that we&#8217;ve run into is that as our database grows (1mil+
 records), there is a major slowdown on page loads due to a <a href="http://sql-info.de/postgresql/postgres-gotchas.html#1_7">PostgreSQL bug</a>.</p>
 
 <p>To resolve this, I had to re-create a new paginator that didn&#8217;t rely on the count(*) sql call. I changed it to work similar to how Google performs their queries relying solely on the offset and max to determine which pagination buttons to show.</p>
@@ -889,40 +717,15 @@ records), there is a major slowdown on page loads due to a <a href="http://sql-i
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/11/12/grails-screencasts/">Grails Screencasts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-11-12T00:00:00-07:00" pubdate  data-updated="true" >Nov 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here are several screencasts that I did for <a href="http://teachmetocode.com/screencasts/tag/grails">TeachMeToCode.com</a></p>
+  <entry>
+    <title type="html"><![CDATA[Grails Screencasts]]></title>
+    <link href="http://cavneb.github.com/blog/2010/11/12/grails-screencasts/"/>
+    <updated>2010-11-12T00:00:00-07:00</updated>
+    <id>http://cavneb.github.com/blog/2010/11/12/grails-screencasts</id>
+    <content type="html"><![CDATA[<p>Here are several screencasts that I did for <a href="http://teachmetocode.com/screencasts/tag/grails">TeachMeToCode.com</a></p>
 
 <h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-1/">Introduction to Grails – Part 1</a></h2>
 
@@ -935,40 +738,15 @@ records), there is a major slowdown on page loads due to a <a href="http://sql-i
 <h2><a href="http://teachmetocode.com/screencasts/skinning-in-grails/">Skinning in Grails</a></h2>
 
 <p>In this screencast, I cover how to use custom Grails configurations along with filters to enable url-based site skins.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/28/roll-your-own-ajax-based-captcha-in-grails/">Roll Your Own Ajax-Based Captcha in Grails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-10-28T00:00:00-06:00" pubdate  data-updated="true" >Oct 28<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently, I was asked to come up with a better solution to our
+  <entry>
+    <title type="html"><![CDATA[Roll your own Ajax-Based Captcha in Grails]]></title>
+    <link href="http://cavneb.github.com/blog/2010/10/28/roll-your-own-ajax-based-captcha-in-grails/"/>
+    <updated>2010-10-28T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/10/28/roll-your-own-ajax-based-captcha-in-grails</id>
+    <content type="html"><![CDATA[<p>Recently, I was asked to come up with a better solution to our
 captcha needs. We have been using <a href="http://www.google.com/recaptcha">ReCaptcha</a>, which is great
 but difficult to read at times, and has caused frustrated
 customers and lost sales. I found a great solution at
@@ -976,7 +754,7 @@ customers and lost sales. I found a great solution at
 graphics and let&#8217;s the user choose the right one to prove they
 are human. Here is a screenshot of my implementation:</p>
 
-<p><img src="/images/posts/Using-Criteria-Builder-with-Projections-1.png"></p>
+<p><img src="http://cavneb.github.com/images/posts/Using-Criteria-Builder-with-Projections-1.png"></p>
 
 <p>To make this work within Grails, I had to make several tweaks. The following files are required:</p>
 
@@ -984,7 +762,7 @@ are human. Here is a screenshot of my implementation:</p>
 <li><a href="http://jqueryui.com/">JQuery 1.2+</a> (I am using version - 1.4.2)</li>
 <li><a href="http://jqueryui.com/">JQuery UI</a> (I am using version - 1.8.2)</li>
 <li><a href="http://gist.github.com/651605">jquery.simpleCaptcha-0.2.js</a></li>
-<li><a href="/files/captchaImages.zip">Captcha Images</a> placed in images/captchaImages</li>
+<li><a href="http://cavneb.github.com/files/captchaImages.zip">Captcha Images</a> placed in images/captchaImages</li>
 <li><a href="http://gist.github.com/651613">BCrypt.java</a> by Damien Miller</li>
 <li>CaptchaController.groovy (below)</li>
 </ul>
@@ -1180,40 +958,15 @@ class CaptchaController {
 
 
 <p>So there ya go. It&#8217;s actually pretty easy and customers seem to like choosing an image much more than typing a word that is difficult to read.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/12/uploading-files-in-grails/">Uploading Files in Grails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-10-12T00:00:00-06:00" pubdate  data-updated="true" >Oct 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here&#8217;s the slides from a presentation I did at the
+  <entry>
+    <title type="html"><![CDATA[Uploading Files in Grails]]></title>
+    <link href="http://cavneb.github.com/blog/2010/10/12/uploading-files-in-grails/"/>
+    <updated>2010-10-12T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/10/12/uploading-files-in-grails</id>
+    <content type="html"><![CDATA[<p>Here&#8217;s the slides from a presentation I did at the
 <a href="http://groups.google.com/group/uggug">UGGUG</a> in May 2010. I
 found that I needed to use it again today so I posted it.</p>
 
@@ -1398,40 +1151,15 @@ found that I needed to use it again today so I posted it.</p>
 <p>This now will work in both DEVELOPMENT and PRODUCTION enviroments.</p>
 
 <p><a href="http://github.com/cavneb/FileUploader">http://github.com/cavneb/FileUploader</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/08/passing-data-from-view-to-layout-via-pageproperty/">Passing Data From View to Layout via pageProperty</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-10-08T00:00:00-06:00" pubdate  data-updated="true" >Oct 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am writing a new Grails application which uses the website template Admintasia. Part of the layout gsp file has a section for the header and sub-header. For this to be used, I needed to be able to pass those two strings from the view to the layout.</p>
+  <entry>
+    <title type="html"><![CDATA[Passing Data From View to Layout via pageProperty]]></title>
+    <link href="http://cavneb.github.com/blog/2010/10/08/passing-data-from-view-to-layout-via-pageproperty/"/>
+    <updated>2010-10-08T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/10/08/passing-data-from-view-to-layout-via-pageproperty</id>
+    <content type="html"><![CDATA[<p>I am writing a new Grails application which uses the website template Admintasia. Part of the layout gsp file has a section for the header and sub-header. For this to be used, I needed to be able to pass those two strings from the view to the layout.</p>
 
 <p>Here&#8217;s what my view looks like:</p>
 
@@ -1470,40 +1198,15 @@ found that I needed to use it again today so I posted it.</p>
 
 
 <p>I hope this helps out!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/07/using-tag-lib-within-controllers-and-services/">Using Tag Lib Within Controllers and Services</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-10-07T00:00:00-06:00" pubdate  data-updated="true" >Oct 7<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>So let&#8217;s say you want to utilize the standard grails tag lib
+  <entry>
+    <title type="html"><![CDATA[Using Tag Lib within Controllers and Services]]></title>
+    <link href="http://cavneb.github.com/blog/2010/10/07/using-tag-lib-within-controllers-and-services/"/>
+    <updated>2010-10-07T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/10/07/using-tag-lib-within-controllers-and-services</id>
+    <content type="html"><![CDATA[<p>So let&#8217;s say you want to utilize the standard grails tag lib
 of formatNumber within your domain class, controller or
 service. How would you go about doing it? With the help of a
 blog post by <a href="http://lucastex.com.br/2010/02/03/como-acessar-uma-taglib-de-dentro-de-um-service/">Lucas Teixeira</a>, I was able to get it working without
@@ -1609,170 +1312,99 @@ an issue. Here is the code:</p>
 
 
 <p>Just make sure that you include the &#8216;def grailsApplication&#8217; in the beginning.</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Using Criteria Builder with Projections]]></title>
+    <link href="http://cavneb.github.com/blog/2010/10/06/using-criteria-builder-with-projections/"/>
+    <updated>2010-10-06T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/10/06/using-criteria-builder-with-projections</id>
+    <content type="html"><![CDATA[<p>Something I had to dig around for today was how to perform a sum on a table using Criteria Builder. It seems that it is treated a bit different than a normal query would be. Here is an example of what I tried and failed at:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">def</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Transaction</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">()</span>
+</span><span class='line'><span class="n">def</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">get</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">projections</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">sum</span><span class="o">(</span><span class="s">&quot;amount&quot;</span><span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="n">and</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">eq</span><span class="o">(</span><span class="s">&quot;status&quot;</span><span class="o">,</span> <span class="n">k</span><span class="o">)</span>
+</span><span class='line'>    <span class="n">eq</span><span class="o">(</span><span class="s">&quot;transactionType&quot;</span><span class="o">,</span> <span class="n">transactionType</span><span class="o">)</span>
+</span><span class='line'>    <span class="n">ge</span><span class="o">(</span><span class="s">&quot;dateTimeProcessed&quot;</span><span class="o">,</span> <span class="n">cal1</span><span class="o">.</span><span class="na">getTime</span><span class="o">())</span>
+</span><span class='line'>    <span class="n">le</span><span class="o">(</span><span class="s">&quot;dateTimeProcessed&quot;</span><span class="o">,</span> <span class="n">cal2</span><span class="o">.</span><span class="na">getTime</span><span class="o">())</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After playing around with it a bit, I found that I can&#8217;t use the &#8216;and&#8217; closure. I revised the code to the following and it worked:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">def</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Transaction</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">()</span>
+</span><span class='line'><span class="n">def</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">get</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">projections</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">sum</span><span class="o">(</span><span class="s">&quot;amount&quot;</span><span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="n">eq</span><span class="o">(</span><span class="s">&quot;status&quot;</span><span class="o">,</span> <span class="n">k</span><span class="o">)</span>
+</span><span class='line'>  <span class="n">eq</span><span class="o">(</span><span class="s">&quot;transactionType&quot;</span><span class="o">,</span> <span class="n">transactionType</span><span class="o">)</span>
+</span><span class='line'>  <span class="n">ge</span><span class="o">(</span><span class="s">&quot;dateTimeProcessed&quot;</span><span class="o">,</span> <span class="n">cal1</span><span class="o">.</span><span class="na">getTime</span><span class="o">())</span>
+</span><span class='line'>  <span class="n">le</span><span class="o">(</span><span class="s">&quot;dateTimeProcessed&quot;</span><span class="o">,</span> <span class="n">cal2</span><span class="o">.</span><span class="na">getTime</span><span class="o">())</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Multi-Line Rails Logger Trick]]></title>
+    <link href="http://cavneb.github.com/blog/2010/05/27/multi-line-rails-logger-trick/"/>
+    <updated>2010-05-27T00:00:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2010/05/27/multi-line-rails-logger-trick</id>
+    <content type="html"><![CDATA[<p>One thing that I like to do with my logger output is allow for multi-line output. It makes it much easier to read and keeps my code cleaner.</p>
+
+<p>Instead of doing this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">logger</span><span class="o">.</span><span class="n">info</span> <span class="s2">&quot;Current Contest: </span><span class="si">#{</span><span class="vi">@contest</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'><span class="n">logger</span><span class="o">.</span><span class="n">info</span> <span class="s2">&quot;Current User: </span><span class="si">#{</span><span class="vi">@contest</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-    </article>
+<p>You can do this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">logger</span><span class="o">.</span><span class="n">info</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="s2">    Current Contest: </span><span class="si">#{</span><span class="vi">@contest</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"></span>
+</span><span class='line'><span class="s2">    Current User: </span><span class="si">#{</span><span class="vi">@contest</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"></span>
+</span><span class='line'><span class="s2">&quot;&quot;&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
-  <nav class="pagination">
-    <div>
-      
-        <a class="prev" href="/blog/page/2/">&larr; Older</a>
-      
-      <a href="/blog/archives">Blog Archives</a>
-      
-    </div>
-  </nav>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2011/08/09/bunny-rabbitmq/">Bunny RabbitMQ</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/07/17/google-plus-for-the-facebook-user/">Google+ for the Facebook User</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/">How to fix the iconv require error in Ruby 1.9 and RVM</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/29/multi-associative-gorm-criteria-with-projections/">Multi-Associative GORM Criteria with Projections</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues/">Paginator for those suffering from PostgreSQL count(*) speed issues</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>Github Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/cavneb">@cavneb</a> on Github
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'cavneb',
-            count: 4,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("cavneb", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/cavneb" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @cavneb</a>
-  
-</section>
-
-
-<section>
-  <h1>On Delicious</h1>
-  <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/cavneb?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
-  <p><a href="http://delicious.com/cavneb">My Delicious Bookmarks &raquo;</a></p>
-</section>
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2011 - Eric Berry -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-    
-      var disqus_shortname = 'cavneb';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-
-
-</body>
-</html>
+</feed>

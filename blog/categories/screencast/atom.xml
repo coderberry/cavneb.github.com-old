@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Screencast | coderberry]]></title>
+  <link href="http://cavneb.github.com/blog/categories/screencast/atom.xml" rel="self"/>
+  <link href="http://cavneb.github.com/"/>
+  <updated>2011-10-18T17:36:23-06:00</updated>
+  <id>http://cavneb.github.com/</id>
+  <author>
+    <name><![CDATA[Eric Berry]]></name>
+    <email><![CDATA[coderberry@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Grails Screencasts]]></title>
+    <link href="http://cavneb.github.com/blog/2010/11/12/grails-screencasts/"/>
+    <updated>2010-11-12T00:00:00-07:00</updated>
+    <id>http://cavneb.github.com/blog/2010/11/12/grails-screencasts</id>
+    <content type="html"><![CDATA[<p>Here are several screencasts that I did for <a href="http://teachmetocode.com/screencasts/tag/grails">TeachMeToCode.com</a></p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-1/">Introduction to Grails – Part 1</a></h2>
+
+<p>Are you new to Grails? Grails is an excellent alternative to Ruby on Rails, which uses Groovy / Java. In this screencast, learn how to create a simple CRUD system with Grails.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-2/">Introduction to Grails – Part 2</a></h2>
+
+<p>In this screencast, we continue on our task of creating a ‘Stack Overflow’ clone by adding more domain classes and relationships between them. We also cover how to test your classes using integration tests.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/skinning-in-grails/">Skinning in Grails</a></h2>
+
+<p>In this screencast, I cover how to use custom Grails configurations along with filters to enable url-based site skins.</p>
+]]></content>
+  </entry>
+  
+</feed>
