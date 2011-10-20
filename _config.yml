@@ -77,8 +77,8 @@ delicious_user: cavneb
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: cavneb
-disqus_show_comment_count: false
+disqus_short_name: coderberry
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-26417518-1
