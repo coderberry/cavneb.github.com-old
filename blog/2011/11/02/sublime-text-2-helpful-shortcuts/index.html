@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to fix the iconv require error in Ruby 1.9 and RVM - coderberry</title>
+  <title>Sublime Text 2 Helpful Shortcuts - coderberry</title>
   <meta name="author" content="Eric Berry">
 
   
-  <meta name="description" content="This post was copied from exceptions.wordpress.com with minor updates.So you are working with RVM / Rails 3 / Ruby 1.9.2 and you keep on getting th...">
+  <meta name="description" content="Sublime Text 2 has become my favorite Ruby on Rails editor, surpassing my love of TextMate. I won&#8217;t get into why I love it because those who ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/">
+  <link rel="canonical" href="http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -66,7 +66,7 @@
   
   <header>
     
-      <h1 class="entry-title">How to Fix the Iconv Require Error in Ruby 1.9 and RVM</h1>
+      <h1 class="entry-title">Sublime Text 2 Helpful Shortcuts</h1>
     
     
       <p class="meta">
@@ -80,70 +80,58 @@
 
 
 
-<time datetime="2011-05-17T00:00:00-06:00" pubdate  data-updated="true" >May 17<span>th</span>, 2011</time>
+<time datetime="2011-11-02T09:52:00-06:00" pubdate  data-updated="true" >Nov 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><em>This post was copied from <a href="http://exceptionz.wordpress.com/2010/02/03/how-to-fix-the-iconv-require-error-in-ruby-1-9/">exceptions.wordpress.com</a> with minor updates.</em></p>
+<div class="entry-content"><p><a href="http://www.sublimetext.com/">Sublime Text 2</a> has become my favorite Ruby on Rails editor, surpassing my love of <a href="http://www.macromates.com">TextMate</a>. I won&#8217;t get into why I love it because those who use it, love it. Well worth the $60.</p>
 
-<p>So you are working with RVM / Rails 3 / Ruby 1.9.2 and you keep on getting the following error:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>'require': no such file to load – iconv (LoadError)</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>To fix the issue, perform the following steps:</strong></p>
-
-<ol>
-<li>Install readline using rvm: rvm install readline rvm package install readline</li>
-<li>Now install iconv by executing: rvm install iconv rvm package install iconv</li>
-<li>If you already have a version of Ruby 1.9 installed, we need to remove it by executing:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm remove 1.9.2</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>The final step is to re-install the version of ruby:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm install --trace 1.9.2 -C --with-iconv-dir=$HOME/.rvm/usr</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Now to test that it worked:</strong></p>
-
-<ol>
-<li>Change to the ruby version you installed: <em>rvm use 1.9.2</em></li>
-<li>Check you are on the right version of ruby:</li>
-</ol>
-
+<p>I created a sticky note on my desktop that contains a bunch of shortcuts that I am constantly finding useful when developing. I wanted to share those and perhaps those of you who have other ones that are equally as useful can post comments and I will update my list.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ruby -v
-</span><span class='line'>ruby 1.9.2p180 (2011-02-18 revision 30909) [x86_64-darwin10.6.0]</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Sublime Text 2 Shortcuts
+</span><span class='line'>
+</span><span class='line'>⌘+r         View methods or functions in a file.
+</span><span class='line'>⌃⇧⌘+f       Distraction free editing
+</span><span class='line'>⌘⇧+k,b      Toggle side panel
+</span><span class='line'>⌘⇧+p        Command palette
+</span><span class='line'>⌘+d         Select next occurrence of word
+</span><span class='line'>⌘⌃+g        Select ALL occurrence of word
+</span><span class='line'>⌘⌃+a        Auto align
+</span><span class='line'>⌘⌥⇧+2       Split screen
+</span><span class='line'>⌘⌥+1        Exit split screen
+</span><span class='line'>⌘⌃+↑        Shift selection up
+</span><span class='line'>⌘⌃+↓        Shift selection up
+</span><span class='line'>
+</span><span class='line'>--------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>⌘ (Command key)
+</span><span class='line'>⌥ (Option key)
+</span><span class='line'>⇧ (Shift key)
+</span><span class='line'>⌃ (Control key)</span></code></pre></td></tr></table></div></figure>
 
-
-<ol>
-<li>Start a new irb session</li>
-<li>Now you should be able to require &#8216;iconv&#8217; and get a &#8216;true&#8217; result</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ruby-1.9.2-p180 :001 &gt; require 'iconv'
-</span><span class='line'>=&gt; true</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you should be good to go!</p>
 </div>
 
 
@@ -164,12 +152,12 @@
 
 
 
-<time datetime="2011-05-17T00:00:00-06:00" pubdate  data-updated="true" >May 17<span>th</span>, 2011</time>
+<time datetime="2011-11-02T09:52:00-06:00" pubdate  data-updated="true" >Nov 2<span>nd</span>, 2011</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+    <a class='category' href='/blog/categories/tools/'>tools</a>
   
 </span>
 
@@ -178,7 +166,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/" data-via="cavneb" data-counturl="http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/" data-via="cavneb" data-counturl="http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -191,10 +179,8 @@
     
     <p class="meta">
        
-        <a class="basic-alignment left" href="/blog/2011/03/29/multi-associative-gorm-criteria-with-projections/" title="Previous Post: Multi-Associative GORM Criteria with Projections">&laquo; Multi-Associative GORM Criteria with Projections</a>
+        <a class="basic-alignment left" href="/blog/2011/08/09/bunny-rabbitmq/" title="Previous Post: Bunny RabbitMQ">&laquo; Bunny RabbitMQ</a>
       
-       
-        <a class="basic-alignment right" href="/blog/2011/07/17/google-plus-for-the-facebook-user/" title="next Post: Google+ for the Facebook User">Google+ for the Facebook User &raquo;</a>
       
     </p>
   </footer>
@@ -312,8 +298,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/';
-        var disqus_url = 'http://cavneb.github.com/blog/2011/05/17/how-to-fix-the-iconv-require-error-in-ruby-1-dot-9-and-rvm/';
+        var disqus_identifier = 'http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/';
+        var disqus_url = 'http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/';
         var disqus_script = 'embed.js';
       
     (function () {

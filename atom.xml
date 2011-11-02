@@ -4,7 +4,7 @@
   <title><![CDATA[coderberry]]></title>
   <link href="http://cavneb.github.com/atom.xml" rel="self"/>
   <link href="http://cavneb.github.com/"/>
-  <updated>2011-10-18T17:36:23-06:00</updated>
+  <updated>2011-11-02T10:03:28-06:00</updated>
   <id>http://cavneb.github.com/</id>
   <author>
     <name><![CDATA[Eric Berry]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text 2 Helpful Shortcuts]]></title>
+    <link href="http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/"/>
+    <updated>2011-11-02T09:52:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts</id>
+    <content type="html"><![CDATA[<p><a href="http://www.sublimetext.com/">Sublime Text 2</a> has become my favorite Ruby on Rails editor, surpassing my love of <a href="http://www.macromates.com">TextMate</a>. I won&#8217;t get into why I love it because those who use it, love it. Well worth the $60.</p>
+
+<p>I created a sticky note on my desktop that contains a bunch of shortcuts that I am constantly finding useful when developing. I wanted to share those and perhaps those of you who have other ones that are equally as useful can post comments and I will update my list.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Sublime Text 2 Shortcuts
+</span><span class='line'>
+</span><span class='line'>⌘+r         View methods or functions in a file.
+</span><span class='line'>⌃⇧⌘+f       Distraction free editing
+</span><span class='line'>⌘⇧+k,b      Toggle side panel
+</span><span class='line'>⌘⇧+p        Command palette
+</span><span class='line'>⌘+d         Select next occurrence of word
+</span><span class='line'>⌘⌃+g        Select ALL occurrence of word
+</span><span class='line'>⌘⌃+a        Auto align
+</span><span class='line'>⌘⌥⇧+2       Split screen
+</span><span class='line'>⌘⌥+1        Exit split screen
+</span><span class='line'>⌘⌃+↑        Shift selection up
+</span><span class='line'>⌘⌃+↓        Shift selection up
+</span><span class='line'>
+</span><span class='line'>--------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>⌘ (Command key)
+</span><span class='line'>⌥ (Option key)
+</span><span class='line'>⇧ (Shift key)
+</span><span class='line'>⌃ (Control key)</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bunny RabbitMQ]]></title>

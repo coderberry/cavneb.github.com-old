@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tools | coderberry]]></title>
+  <link href="http://cavneb.github.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://cavneb.github.com/"/>
+  <updated>2011-11-02T10:03:28-06:00</updated>
+  <id>http://cavneb.github.com/</id>
+  <author>
+    <name><![CDATA[Eric Berry]]></name>
+    <email><![CDATA[coderberry@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text 2 Helpful Shortcuts]]></title>
+    <link href="http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts/"/>
+    <updated>2011-11-02T09:52:00-06:00</updated>
+    <id>http://cavneb.github.com/blog/2011/11/02/sublime-text-2-helpful-shortcuts</id>
+    <content type="html"><![CDATA[<p><a href="http://www.sublimetext.com/">Sublime Text 2</a> has become my favorite Ruby on Rails editor, surpassing my love of <a href="http://www.macromates.com">TextMate</a>. I won't get into why I love it because those who use it, love it. Well worth the $60.</p>
+
+<p>I created a sticky note on my desktop that contains a bunch of shortcuts that I am constantly finding useful when developing. I wanted to share those and perhaps those of you who have other ones that are equally as useful can post comments and I will update my list.</p>
+
+<p>```
+Sublime Text 2 Shortcuts</p>
+
+<p>⌘+r         View methods or functions in a file.
+⌃⇧⌘+f       Distraction free editing
+⌘⇧+k,b      Toggle side panel
+⌘⇧+p        Command palette
+⌘+d         Select next occurrence of word
+⌘⌃+g        Select ALL occurrence of word
+⌘⌃+a        Auto align
+⌘⌥⇧+2       Split screen
+⌘⌥+1        Exit split screen
+⌘⌃+↑        Shift selection up
+⌘⌃+↓        Shift selection up</p>
+
+<hr />
+
+<p>⌘ (Command key)
+⌥ (Option key)
+⇧ (Shift key)
+⌃ (Control key)
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
