@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Groovy | coderberry]]></title>
+  <link href="http://coderberry.me/blog/categories/groovy/atom.xml" rel="self"/>
+  <link href="http://coderberry.me/"/>
+  <updated>2012-04-23T09:08:51-06:00</updated>
+  <id>http://coderberry.me/</id>
+  <author>
+    <name><![CDATA[Eric Berry]]></name>
+    <email><![CDATA[coderberry@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Grails Domain Classes and Enums]]></title>
+    <link href="http://coderberry.me/blog/2012/04/17/grails-domain-classes-and-enums/"/>
+    <updated>2012-04-17T18:38:00-06:00</updated>
+    <id>http://coderberry.me/blog/2012/04/17/grails-domain-classes-and-enums</id>
+    <content type="html"><![CDATA[<p>For a long time, I have been creating static int values to represent states in domain classes. For example, I would have something like the following:</p>
+
+<p>```java
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static final int STATUS_PENDING  = 1
+  static final int STATUS_APPROVED = 2
+  static final int STATUS_REJECTED = 3</p>
+
+<p>  int status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false, inList: [
+  STATUS_PENDING_APPROVAL, STATUS_APPROVED, STATUS_REJECTED
+]
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>Peter Ledbrook ( <a href="https://twitter.com/#!/pledbrook">@pledbrook</a> ) gave me some tips on how to handle this better using <code>Enums</code>. Enum values should always be in uppercase letters because they are constants in the fixed set. If we were to refactor the code above, it would something more like this:</p>
+
+<p>```java
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>This works great for a single domain class, but what if I wanted to use the same Enum in two different domain classes. For example:</p>
+
+<p>```java
+// PluginPendingApproval.groovy
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static hasMany = [pluginPendingApprovalRequests: PluginPendingApprovalRequest]</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}</p>
+
+<p>// PluginPendingApprovalRequest.groovy
+package org.example</p>
+
+<p>class PluginPendingApprovalRequest {</p>
+
+<p>  static belongsTo = [pluginPendingApproval: PluginPendingApproval]</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>I could keep do it this way where I have the enum code duplicated in two places, but that doesn't follow the DRY principal.</p>
+
+<p>Let's refactor this and create a new Enum class that both domain classes can use:</p>
+
+<p>```java
+package org.example</p>
+
+<p>public enum ApprovalStatusEnum {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now both of my domain classes can access the same Enum:</p>
+
+<p>```java
+// PluginPendingApproval.groovy
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static hasMany = [pluginPendingApprovalRequests: PluginPendingApprovalRequest]</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}</p>
+
+<p>// PluginPendingApprovalRequest.groovy
+package org.example</p>
+
+<p>class PluginPendingApprovalRequest {</p>
+
+<p>  static belongsTo = [pluginPendingApproval: PluginPendingApproval]</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>For more information on Enums in Groovy, see <a href="http://groovy.codehaus.org/Using+Enums">http://groovy.codehaus.org/Using+Enums</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Groovy &amp; Grails - Want to know more?]]></title>
+    <link href="http://coderberry.me/blog/2011/10/18/groovy-and-grails-want-to-know-more/"/>
+    <updated>2011-10-18T23:16:00-06:00</updated>
+    <id>http://coderberry.me/blog/2011/10/18/groovy-and-grails-want-to-know-more</id>
+    <content type="html"><![CDATA[<p>For those who are new to Groovy and Grails, here are a list of screencasts I created a while ago, along with a couple of slideshare presentations.</p>
+
+<iframe src="http://player.vimeo.com/video/8956337?title=0&amp;byline=0&amp;portrait=0" width="590" height="335" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+
+
+<iframe src="http://player.vimeo.com/video/9284782?title=0&amp;byline=0&amp;portrait=0" width="590" height="335" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/3379277" width="590" height="460" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/3261710" width="590" height="460" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grails Screencasts]]></title>
+    <link href="http://coderberry.me/blog/2010/11/12/grails-screencasts/"/>
+    <updated>2010-11-12T00:00:00-07:00</updated>
+    <id>http://coderberry.me/blog/2010/11/12/grails-screencasts</id>
+    <content type="html"><![CDATA[<p>Here are several screencasts that I did for <a href="http://teachmetocode.com/screencasts/tag/grails">TeachMeToCode.com</a></p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-1/">Introduction to Grails – Part 1</a></h2>
+
+<p>Are you new to Grails? Grails is an excellent alternative to Ruby on Rails, which uses Groovy / Java. In this screencast, learn how to create a simple CRUD system with Grails.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-2/">Introduction to Grails – Part 2</a></h2>
+
+<p>In this screencast, we continue on our task of creating a ‘Stack Overflow’ clone by adding more domain classes and relationships between them. We also cover how to test your classes using integration tests.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/skinning-in-grails/">Skinning in Grails</a></h2>
+
+<p>In this screencast, I cover how to use custom Grails configurations along with filters to enable url-based site skins.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Tag Lib within Controllers and Services]]></title>
+    <link href="http://coderberry.me/blog/2010/10/07/using-tag-lib-within-controllers-and-services/"/>
+    <updated>2010-10-07T00:00:00-06:00</updated>
+    <id>http://coderberry.me/blog/2010/10/07/using-tag-lib-within-controllers-and-services</id>
+    <content type="html"><![CDATA[<p>So let's say you want to utilize the standard grails tag lib
+of formatNumber within your domain class, controller or
+service. How would you go about doing it? With the help of a
+blog post by <a href="http://lucastex.com.br/2010/02/03/como-acessar-uma-taglib-de-dentro-de-um-service/">Lucas Teixeira</a>, I was able to get it working without
+an issue. Here is the code:</p>
+
+<p>``` java
+class Book {</p>
+
+<p>  def grailsApplication</p>
+
+<p>  String title
+  Float cost</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>title(blank: false)
+cost(blank: false)
+</code></pre>
+
+<p>  }</p>
+
+<p>  def String toDisplayString() {</p>
+
+<pre><code>def g = grailsApplication.mainContext.getBean(
+  'org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib'
+)
+return "${title} costs ${g.formatNumber(
+  [number: cost, type: "currency", currencyCode: "USD"]
+)}"
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>It's also simple to utilize your own tag libs as well. Here's a tag lib that I created to help with XML formatting:</p>
+
+<p>``` java
+class CommonTagLib {</p>
+
+<pre><code>static namespace = 'berry'
+
+def formatXML = { attrs, body -&gt;
+    String rawXML = body().toString()
+    try {
+        def slurpedXML = new XmlSlurper().parseText(rawXML)
+        def writer = new StringWriter()
+        new XmlNodePrinter(new PrintWriter(writer)).print(slurpedXML)
+        def formattedResponse = writer.toString()
+        out &lt;&lt; formattedResponse
+    } catch(Exception e) {
+        log.info "Unable to parse XML: ${e.message}"
+        out &lt;&lt; rawXML
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>So to call this tag lib in the domain class, controller or service, I just need to do the following:</p>
+
+<p><code>java
+def berry = grailsApplication.mainContext.getBean('CommonTagLib')
+return berry.formatXML("....")
+</code></p>
+
+<p>Just make sure that you include the 'def grailsApplication' in the beginning.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Criteria Builder with Projections]]></title>
+    <link href="http://coderberry.me/blog/2010/10/06/using-criteria-builder-with-projections/"/>
+    <updated>2010-10-06T00:00:00-06:00</updated>
+    <id>http://coderberry.me/blog/2010/10/06/using-criteria-builder-with-projections</id>
+    <content type="html"><![CDATA[<p>Something I had to dig around for today was how to perform a sum on a table using Criteria Builder. It seems that it is treated a bit different than a normal query would be. Here is an example of what I tried and failed at:</p>
+
+<p>``` java
+def c = Transaction.createCriteria()
+def cnt = c.get {
+  projections {</p>
+
+<pre><code>sum("amount")
+</code></pre>
+
+<p>  }
+  and {</p>
+
+<pre><code>eq("status", k)
+eq("transactionType", transactionType)
+ge("dateTimeProcessed", cal1.getTime())
+le("dateTimeProcessed", cal2.getTime())
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>After playing around with it a bit, I found that I can't use the 'and' closure. I revised the code to the following and it worked:</p>
+
+<p>``` java
+def c = Transaction.createCriteria()
+def cnt = c.get {
+  projections {</p>
+
+<pre><code>sum("amount")
+</code></pre>
+
+<p>  }
+  eq("status", k)
+  eq("transactionType", transactionType)
+  ge("dateTimeProcessed", cal1.getTime())
+  le("dateTimeProcessed", cal2.getTime())
+}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
