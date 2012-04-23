@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Grails | coderberry]]></title>
+  <link href="http://coderberry.me/blog/categories/grails/atom.xml" rel="self"/>
+  <link href="http://coderberry.me/"/>
+  <updated>2012-04-23T09:08:51-06:00</updated>
+  <id>http://coderberry.me/</id>
+  <author>
+    <name><![CDATA[Eric Berry]]></name>
+    <email><![CDATA[coderberry@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Grails Domain Classes and Enums]]></title>
+    <link href="http://coderberry.me/blog/2012/04/17/grails-domain-classes-and-enums/"/>
+    <updated>2012-04-17T18:38:00-06:00</updated>
+    <id>http://coderberry.me/blog/2012/04/17/grails-domain-classes-and-enums</id>
+    <content type="html"><![CDATA[<p>For a long time, I have been creating static int values to represent states in domain classes. For example, I would have something like the following:</p>
+
+<p>```java
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static final int STATUS_PENDING  = 1
+  static final int STATUS_APPROVED = 2
+  static final int STATUS_REJECTED = 3</p>
+
+<p>  int status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false, inList: [
+  STATUS_PENDING_APPROVAL, STATUS_APPROVED, STATUS_REJECTED
+]
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>Peter Ledbrook ( <a href="https://twitter.com/#!/pledbrook">@pledbrook</a> ) gave me some tips on how to handle this better using <code>Enums</code>. Enum values should always be in uppercase letters because they are constants in the fixed set. If we were to refactor the code above, it would something more like this:</p>
+
+<p>```java
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>This works great for a single domain class, but what if I wanted to use the same Enum in two different domain classes. For example:</p>
+
+<p>```java
+// PluginPendingApproval.groovy
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static hasMany = [pluginPendingApprovalRequests: PluginPendingApprovalRequest]</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}</p>
+
+<p>// PluginPendingApprovalRequest.groovy
+package org.example</p>
+
+<p>class PluginPendingApprovalRequest {</p>
+
+<p>  static belongsTo = [pluginPendingApproval: PluginPendingApproval]</p>
+
+<p>  enum ApprovalStatus {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>  }</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>I could keep do it this way where I have the enum code duplicated in two places, but that doesn't follow the DRY principal.</p>
+
+<p>Let's refactor this and create a new Enum class that both domain classes can use:</p>
+
+<p>```java
+package org.example</p>
+
+<p>public enum ApprovalStatusEnum {</p>
+
+<pre><code>PENDING, APPROVED, REJECTED
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now both of my domain classes can access the same Enum:</p>
+
+<p>```java
+// PluginPendingApproval.groovy
+package org.example</p>
+
+<p>class PluginPendingApproval {</p>
+
+<p>  static hasMany = [pluginPendingApprovalRequests: PluginPendingApprovalRequest]</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}</p>
+
+<p>// PluginPendingApprovalRequest.groovy
+package org.example</p>
+
+<p>class PluginPendingApprovalRequest {</p>
+
+<p>  static belongsTo = [pluginPendingApproval: PluginPendingApproval]</p>
+
+<p>  ApprovalStatus status</p>
+
+<p>  static constraints = {</p>
+
+<pre><code>status blank: false
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+
+<p>For more information on Enums in Groovy, see <a href="http://groovy.codehaus.org/Using+Enums">http://groovy.codehaus.org/Using+Enums</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Groovy &amp; Grails - Want to know more?]]></title>
+    <link href="http://coderberry.me/blog/2011/10/18/groovy-and-grails-want-to-know-more/"/>
+    <updated>2011-10-18T23:16:00-06:00</updated>
+    <id>http://coderberry.me/blog/2011/10/18/groovy-and-grails-want-to-know-more</id>
+    <content type="html"><![CDATA[<p>For those who are new to Groovy and Grails, here are a list of screencasts I created a while ago, along with a couple of slideshare presentations.</p>
+
+<iframe src="http://player.vimeo.com/video/8956337?title=0&amp;byline=0&amp;portrait=0" width="590" height="335" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+
+
+<iframe src="http://player.vimeo.com/video/9284782?title=0&amp;byline=0&amp;portrait=0" width="590" height="335" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/3379277" width="590" height="460" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/3261710" width="590" height="460" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Multi-Associative GORM Criteria with Projections]]></title>
+    <link href="http://coderberry.me/blog/2011/03/29/multi-associative-gorm-criteria-with-projections/"/>
+    <updated>2011-03-29T00:00:00-06:00</updated>
+    <id>http://coderberry.me/blog/2011/03/29/multi-associative-gorm-criteria-with-projections</id>
+    <content type="html"><![CDATA[<p>I have three domain classes: Lead, Submission and BuyerLog:</p>
+
+<p>``` java
+class Lead {
+  static hasMany = [ submissions: Submission ]
+  Date dateCreated
+  // ...
+}</p>
+
+<p>class Submission {
+  static belongsTo = [ lead: Lead ]
+  static hasMany = [ buyerLogs: BuyerLog ]
+  Lead lead
+  // ...
+}</p>
+
+<p>class BuyerLog {
+  static belongsTo = [ submission: Submission ]
+  Submission submission
+  String leadBuyer
+  // ...
+}
+```</p>
+
+<p>I have a need to get the number of duplicate leads which share the same leadBuyer (in the BuyerLog domain class). Here is the SQL:</p>
+
+<p>``` sql
+SELECT count(l.id)
+  FROM lead AS l, submission AS s, buyerLog as bl</p>
+
+<pre><code>WHERE l.id = s.leadId
+  AND s.id = bl.submissionId
+  AND bl.leadBuyer = $buyerName
+  AND l.id != $lead.id
+  AND l.dateCreated::date &gt; $daysAgo
+</code></pre>
+
+<p>```</p>
+
+<p>I want to do this using GORM / Criteria Builder. Here's my final code:</p>
+
+<p>``` java
+/<em>*
+ * Count duplicate submissions within 45 days
+ * SELECT count(l.id)
+ *      FROM lead AS l, submission AS s, buyerLog as bl
+ *      WHERE l.id = s.leadId
+ *          AND s.id = bl.submissionId
+ *          AND bl.leadBuyer = $buyerName
+ *          AND l.id != $lead.id
+ *          AND l.dateCreated::date > $daysAgo
+ </em>/
+protected def Boolean isDuplicateSubmission(Lead lead, ArrayList<String> buyerNames) {
+  def isDuplicate = false
+  def daysAgo = new Date() - 45
+  def cnt = Lead.withCriteria {</p>
+
+<pre><code>not {
+  idEq(lead.id)
+}
+and {
+  le('dateCreated', daysAgo)
+  submissions {
+    buyerLogs {
+      inList('leadBuyer', buyerNames)
+    }
+  }
+}
+projections {
+  rowCount()
+}
+</code></pre>
+
+<p>  }
+  return (cnt > 0)
+}
+```</p>
+
+<p>Thanks to schmolly159 on the #grails freenode IRC channel for the examples and continued help.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paginator for those suffering from PostgreSQL count(*) speed issues]]></title>
+    <link href="http://coderberry.me/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues/"/>
+    <updated>2010-11-24T00:00:00-07:00</updated>
+    <id>http://coderberry.me/blog/2010/11/24/paginator-for-those-suffering-from-postgresql-count-star-speed-issues</id>
+    <content type="html"><![CDATA[<p>Our company has been using PostgreSQL for  a very long time and has found it a very solid product for our needs. One thing that we've run into is that as our database grows (1mil+
+records), there is a major slowdown on page loads due to a <a href="http://sql-info.de/postgresql/postgres-gotchas.html#1_7">PostgreSQL bug</a>.</p>
+
+<p>To resolve this, I had to re-create a new paginator that didn't rely on the count(*) sql call. I changed it to work similar to how Google performs their queries relying solely on the offset and max to determine which pagination buttons to show.</p>
+
+<p>Here's my final taglib:</p>
+
+<p>``` java
+package com.example</p>
+
+<p>import org.springframework.web.servlet.support.RequestContextUtils as RCU</p>
+
+<p>class PagerTagLib {</p>
+
+<p>  /<em><em>
+   * Creates next/previous links to support pagination for the current controller
+   * This is developed to avoid problems with the PostgreSQL count(</em>) bug.
+   * http://sql-info.de/postgresql/postgres-gotchas.html#1_7
+   *
+   * &lt;g:pager total="${accountListInstance.size()}" params="${params}" />
+   </em>/
+  def pager = { attrs -></p>
+
+<pre><code>  def writer = out
+  if (attrs.total == null) {
+      throwTagError("Tag [pager] is missing required attribute [total] which is the total showing for the current page")
+  }
+
+  def messageSource = grailsAttributes.messageSource
+  def locale = RCU.getLocale(request)
+
+def total = attrs.int('total') ?: 0
+
+  def action = (attrs.action ? attrs.action : (params.action ? params.action : "list"))
+  def offset = params.int('offset') ?: 0
+  def max = params.int('max')
+
+  if (!offset) offset = (attrs.int('offset') ?: 0)
+  if (!max) max = (attrs.int('max') ?: 10)
+
+  def linkParams = [:]
+  if (attrs.params) linkParams.putAll(attrs.params)
+  linkParams.offset = offset - max
+  linkParams.max = max
+  if (params.sort) linkParams.sort = params.sort
+  if (params.order) linkParams.order = params.order
+
+  def linkTagAttrs = [action:action]
+  if (attrs.controller) {
+      linkTagAttrs.controller = attrs.controller
+  }
+  if (attrs.id!=null) {
+      linkTagAttrs.id = attrs.id
+  }
+  linkTagAttrs.params = linkParams
+
+  // determine paging variables
+def isFirstStep = (offset == 0)
+def isLastStep = (total &lt; max)
+
+  // display previous link when not on firststep
+  if (!isFirstStep) {
+      linkTagAttrs.class = 'prevLink'
+      linkParams.offset = offset - max
+      writer &lt;&lt; link(linkTagAttrs.clone()) {
+          (attrs.prev ? attrs.prev : messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))
+      }
+  }
+
+  // display next link when not on laststep
+  if (!isLastStep) {
+      linkTagAttrs.class = 'nextLink'
+      linkParams.offset = offset + max
+      writer &lt;&lt; link(linkTagAttrs.clone()) {
+          (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))
+      }
+  }
+</code></pre>
+
+<p>  }</p>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grails Screencasts]]></title>
+    <link href="http://coderberry.me/blog/2010/11/12/grails-screencasts/"/>
+    <updated>2010-11-12T00:00:00-07:00</updated>
+    <id>http://coderberry.me/blog/2010/11/12/grails-screencasts</id>
+    <content type="html"><![CDATA[<p>Here are several screencasts that I did for <a href="http://teachmetocode.com/screencasts/tag/grails">TeachMeToCode.com</a></p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-1/">Introduction to Grails – Part 1</a></h2>
+
+<p>Are you new to Grails? Grails is an excellent alternative to Ruby on Rails, which uses Groovy / Java. In this screencast, learn how to create a simple CRUD system with Grails.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/introduction-to-grails-part-2/">Introduction to Grails – Part 2</a></h2>
+
+<p>In this screencast, we continue on our task of creating a ‘Stack Overflow’ clone by adding more domain classes and relationships between them. We also cover how to test your classes using integration tests.</p>
+
+<h2><a href="http://teachmetocode.com/screencasts/skinning-in-grails/">Skinning in Grails</a></h2>
+
+<p>In this screencast, I cover how to use custom Grails configurations along with filters to enable url-based site skins.</p>
+]]></content>
+  </entry>
+  
+</feed>
